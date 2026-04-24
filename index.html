@@ -1,203 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <title>A+ Trading Command Center</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F4 Trading Dashboard</title>
   <style>
     body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0b0f14;
-      color: #e6edf3;
+      padding: 12px;
     }
 
-    header {
-      background: #05070a;
-      padding: 25px;
+    h1 {
       text-align: center;
-      border-bottom: 1px solid #1f2933;
+      color: #38bdf8;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      color: #00ffa3;
-      letter-spacing: 1px;
+    h2 {
+      color: #22c55e;
+      margin-top: 25px;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px 60px;
-    }
-
-    .section {
-      margin-bottom: 50px;
-    }
-
-    .section h2 {
-      color: #00ffa3;
-      border-left: 4px solid #00ffa3;
-      padding-left: 10px;
-      margin-bottom: 20px;
-    }
-
-    .cards {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
     }
 
-    .card {
-      background: #11161d;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-      transition: 0.25s;
-      border: 1px solid #1c2430;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #00ffa3;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #ffffff;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 18px;
-      background: #00ffa3;
-      color: #000;
+    a {
+      display: block;
+      padding: 12px;
+      background: #1e293b;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .btn:hover {
-      background: #00cc82;
-    }
-
-    footer {
+      color: white;
       text-align: center;
-      padding: 20px;
-      border-top: 1px solid #1f2933;
-      background: #05070a;
-      color: #7a8594;
+      font-weight: bold;
+    }
+
+    a:hover {
+      background: #38bdf8;
+      color: black;
+    }
+
+    .highlight {
+      background: #22c55e !important;
+      color: black !important;
+    }
+
+    .danger {
+      background: #ef4444 !important;
+    }
+
+    .box {
+      background: #1e293b;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 15px;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>F4 TRADING DASHBOARD</h1>
-</header>
+<h1>⚡ A+ Trading Dashboard</h1>
 
-<div class="container">
-
-    <!-- ALL TIME FRAME -->
-  <div class="section">
-    <h2>ALL TIME FRAME</h2>
-    <div class="cards">
-
-      <div class="card">
-        <h3>LONG</h3>
-        <a href="https://chartink.com/screener/all-tf-long" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-      <div class="card">
-        <h3>SHORT</h3>
-        <a href="https://chartink.com/screener/all-tf-short" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- F4 LONG -->
-  <div class="section">
-    <h2>F4 LONG</h2>
-    <div class="cards">
-
-      <div class="card">
-        <h3>5 / 15 / 75 Mins</h3>
-        <a href="https://chartink.com/screener/fantastic-4-long-updated-75-15-5-mins" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-      <div class="card">
-        <h3>15 / 75 / 188 Mins</h3>
-        <a href="https://chartink.com/screener/fantastic-4-long-updated-188-75-15-mins" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-      <div class="card">
-        <h3>75 / D / W</h3>
-        <a href="https://chartink.com/screener/fantastic-4-long-updated-w-d-75-mins" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-      <div class="card">
-        <h3>D / W / M</h3>
-        <a href="https://chartink.com/screener/fantastic-4-long-updated-m-w-daily" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- F4 SHORT -->
-  <div class="section">
-    <h2>F4 SHORT</h2>
-    <div class="cards">
-
-      <div class="card">
-        <h3>5 / 15 / 75 Mins</h3>
-        <a href="https://chartink.com/screener/fantastic-4-short-updated-75-15-5-mins" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-      <div class="card">
-        <h3>15 / 75 / 188 Mins</h3>
-        <a href="https://chartink.com/screener/fantastic-4-short-updated-188-75-15-mins" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-      <div class="card">
-        <h3>75 / D / W</h3>
-        <a href="https://chartink.com/screener/fantastic-4-short-updated-w-d-75-mins" target="_blank" class="btn">Open Screener</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- REBOUND -->
-  <div class="section">
-    <h2>REBOUND LONG</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Positional Swing Mean Reversion</h3>
-        <a href="https://chartink.com/screener/fantastic-4-positional-swing-long-mean-reversion" target="_blank" class="btn">Open Screener</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SONIC -->
-  <div class="section">
-    <h2>SONIC 2.0</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Price Below 200 EMA</h3>
-        <a href="https://chartink.com/screener/fantastic-4-long-updated-m-w-daily-price-below-200-ema" target="_blank" class="btn">Open Screener</a>
-      </div>
-    </div>
-  </div>
-
+<!-- A+ SCANS -->
+<h2>🔥 A+ SCANS</h2>
+<div class="grid">
+  <a href="https://chartink.com/screener/early-stage-9" target="_blank">EARLY STAGE</a>
+  <a href="https://chartink.com/screener/sweet-spot-38" target="_blank">SWEET SPOT</a>
+  <a href="https://chartink.com/screener/sweet-spot-38" target="_blank" class="highlight">A+ TRIGGER</a>
 </div>
 
-<footer>
-  F4 Trading System Dashboard
-</footer>
+<!-- F4 MAIN -->
+<h2>⚡ F4 MAIN</h2>
+<div class="grid">
+  <a href="https://chartink.com/screener/new-f4-pull-back" target="_blank">F4 LONG + PULLBACK</a>
+  <a href="https://chartink.com/screener/all-tf-long" target="_blank" class="highlight">ATF LONG</a>
+  <a href="https://chartink.com/screener/all-tf-short" target="_blank" class="danger">ATF SHORT</a>
+</div>
+
+<!-- F4 LONG -->
+<h2>📈 F4 LONG (TF WISE)</h2>
+<div class="grid">
+  <a href="https://chartink.com/screener/fantastic-4-long-updated-75-15-5-mins" target="_blank">5 / 15 / 75</a>
+  <a href="https://chartink.com/screener/fantastic-4-long-updated-188-75-15-mins" target="_blank">15 / 75 / 188</a>
+  <a href="https://chartink.com/screener/fantastic-4-long-updated-w-d-75-mins" target="_blank">75 / D / W</a>
+  <a href="https://chartink.com/screener/fantastic-4-long-updated-m-w-daily" target="_blank">D / W / M</a>
+</div>
+
+<!-- F4 SHORT -->
+<h2>📉 F4 SHORT (TF WISE)</h2>
+<div class="grid">
+  <a href="https://chartink.com/screener/fantastic-4-short-updated-75-15-5-mins" target="_blank">5 / 15 / 75</a>
+  <a href="https://chartink.com/screener/fantastic-4-short-updated-188-75-15-mins" target="_blank">15 / 75 / 188</a>
+  <a href="https://chartink.com/screener/fantastic-4-short-updated-w-d-75-mins" target="_blank">75 / D / W</a>
+  <a href="https://chartink.com/screener/f4-short-monthly" target="_blank">D / W / M</a>
+</div>
+
+<!-- POSITIONAL -->
+<h2>🔁 MEAN REVERSION</h2>
+<div class="grid">
+  <a href="https://chartink.com/screener/fantastic-4-positional-swing-long-mean-reversion" target="_blank">
+    REBOUND LONG
+  </a>
+</div>
+
+<!-- SONIC -->
+<h2>🚀 SONIC SYSTEM</h2>
+<div class="grid">
+  <a href="https://chartink.com/screener/fantastic-4-long-updated-m-w-daily-price-below-200-ema" target="_blank">
+    SONIC 2.0
+  </a>
+</div>
+
+<!-- RULE BOX -->
+<div class="box">
+  <h2>🧠 A+ RULES</h2>
+  <p>✔ Early Stage Only</p>
+  <p>✔ Tight Consolidation</p>
+  <p>✔ Volume Expansion</p>
+  <p>✔ Multi TF Alignment</p>
+  <p>❌ Avoid Extended Stocks</p>
+</div>
 
 </body>
 </html>
